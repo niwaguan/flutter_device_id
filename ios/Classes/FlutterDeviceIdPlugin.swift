@@ -11,7 +11,7 @@ public class FlutterDeviceIdPlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
     case "getDeviceId":
-      result("iOS " + UIDevice.current.systemVersion)
+        result(UIDevice.current.identifierForVendor?.uuidString)
     default:
       result(FlutterMethodNotImplemented)
     }
