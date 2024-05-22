@@ -18,7 +18,7 @@ internal class FlutterDeviceIdPluginTest {
   fun onMethodCall_getPlatformVersion_returnsExpectedValue() {
     val plugin = FlutterDeviceIdPlugin()
 
-    val call = MethodCall("getPlatformVersion", null)
+    val call = MethodCall("getDeviceId", null)
     val mockResult: MethodChannel.Result = Mockito.mock(MethodChannel.Result::class.java)
     plugin.onMethodCall(call, mockResult)
 
